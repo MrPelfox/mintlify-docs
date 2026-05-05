@@ -23,7 +23,25 @@
     "groups": [
       {
         "group": "FuryMine - SMP",
-        "pages": []
+        "pages": [
+          {
+            "group": "Başlangıç",
+            "pages": []
+          },
+          {
+            "group": "Sistemler",
+            "pages": [
+              {
+                "group": "AutoMining",
+                "pages": [
+                  "auto-mining-nedir",
+                  "automining-nasil-kullanilir",
+                  "automining-coinler-ve-kullanim"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
