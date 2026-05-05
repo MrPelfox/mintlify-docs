@@ -1,12 +1,12 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Help Center",
-  "description": "Documentation and guides for this template—workspace setup, product how-tos, and support.",
+  "name": "FuryMine SMP Wikipedia",
+  "description": "FuryMine SMP Hakkında ne öğrenmek istiyorsan burada!",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#6e1616",
+    "light": "#bd2626",
+    "dark": "#6e1616"
   },
   "favicon": "/favicon.ico",
   "icons": {
@@ -61,5 +61,12 @@
       "label": "Dashboard",
       "href": "https://dashboard.mintlify.com"
     }
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "fonts": {
+    "family": "Plus Jakarta Sans",
+    "weight": 500
   }
 }
