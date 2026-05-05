@@ -38,6 +38,26 @@
                   "automining-nasil-kullanilir",
                   "automining-coinler-ve-kullanim"
                 ]
+              },
+              {
+                "group": "CoinMarket",
+                "pages": [
+                  "coin-market-nedir",
+                  "ueruenler-ve-fiyatlar",
+                  "sss-ve-ipuclari"
+                ]
+              },
+              {
+                "group": "Clan ve Perk",
+                "pages": [
+                  "clan-nedir",
+                  "clan-komutlari",
+                  "goerevler-ve-seviye",
+                  "yetenek-sistemi",
+                  "yuekseltmeler-ve-oezellikler",
+                  "siralama-ve-istatistikler",
+                  "ileri-seviye-rehber"
+                ]
               }
             ]
           }

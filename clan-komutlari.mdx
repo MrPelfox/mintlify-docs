@@ -1,0 +1,724 @@
+---
+title: "Clan Komutları"
+---
+
+# 📜 Klan Komutları Rehberi
+
+Klan sistemini kullanmak için bilmen gereken **tüm komutlar** bu sayfada! Her komutun ne işe yaradığını ve nasıl kullanıldığını öğren.
+
+## 🎯 Temel Komutlar
+
+### 🏰 Klan Oluşturma
+
+```text
+/clan create <isim> <etiket>
+```
+
+**Ne yapar:** Yeni bir klan oluşturur.
+
+**Örnek:**
+
+```text
+/clan create FuryWarriors FW
+```
+
+**Kurallar:**
+
+- İsim: 3-24 karakter
+- Etiket: 2-6 karakter
+- Sadece harf, rakam ve alt çizgi
+
+---
+
+### 🗑️ Klan Silme
+
+```text
+/clan disband
+```
+
+**Ne yapar:** Klanı tamamen siler.
+
+**Kim kullanabilir:** Sadece lider
+
+⚠️ **Dikkat:** Bu işlem geri alınamaz! Tüm klan verileri silinir.
+
+---
+
+### 👥 Üye Davet Etme
+
+```text
+/clan invite <oyuncu>
+```
+
+**Ne yapar:** Bir oyuncuyu klana davet eder.
+
+**Kim kullanabilir:** Lider, Yardımcı Lider, Moderatör
+
+**Örnek:**
+
+```text
+/clan invite Oryxel
+```
+
+**Limitler:**
+
+- Klan dolu olmamalı
+- Oyuncu başka klanda olmamalı
+- Oyuncu çevrimiçi olmalı
+
+---
+
+### ✅ Daveti Kabul Etme
+
+```text
+/clan accept
+```
+
+**Ne yapar:** Aldığın klan davetini kabul eder.
+
+**Örnek:**
+
+```text
+/clan accept
+```
+
+Birden fazla davet varsa:
+
+```text
+/clan accept <klan_adı>
+```
+
+---
+
+### ❌ Daveti Reddetme
+
+```text
+/clan deny
+```
+
+**Ne yapar:** Aldığın klan davetini reddeder.
+
+**Örnek:**
+
+```text
+/clan deny
+```
+
+Birden fazla davet varsa:
+
+```text
+/clan deny <klan_adı>
+```
+
+---
+
+### 🚪 Klandan Ayrılma
+
+```text
+/clan leave
+```
+
+**Ne yapar:** Mevcut klanından ayrılır.
+
+⚠️ **Dikkat:** Lider klandan ayrılamaz! Önce liderliği devretmeli veya klanı silmelisin.
+
+---
+
+### 👢 Üye Atma
+
+```text
+/clan kick <oyuncu>
+```
+
+**Ne yapar:** Bir üyeyi klandan atar.
+
+**Kim kullanabilir:** Lider, Yardımcı Lider, Moderatör
+
+**Örnek:**
+
+```text
+/clan kick InaktifOyuncu
+```
+
+**Kurallar:**
+
+- Kendini atamazsın
+- Kendinden yüksek rütbeli birini atamazsın
+
+---
+
+## 📊 Bilgi Komutları
+
+### ℹ️ Klan Bilgisi
+
+```text
+/clan info
+```
+
+**Ne yapar:** Kendi klanının bilgilerini gösterir.
+
+Başka klanın bilgisi için:
+
+```text
+/clan info <klan_adı>
+```
+
+**Gösterilen Bilgiler:**
+
+- Klan ismi ve etiketi
+- Seviye ve XP
+- Coin miktarı
+- Üye sayısı / Kapasite
+- Lider
+- Klan evi durumu
+
+---
+
+### 📋 Klan Listesi
+
+```text
+/clan list
+```
+
+**Ne yapar:** Sunucudaki tüm klanları listeler.
+
+Sayfa belirtmek için:
+
+```text
+/clan list <sayfa>
+```
+
+**Örnek:**
+
+```text
+/clan list 2
+```
+
+---
+
+### 🏆 En İyi Klanlar
+
+```text
+/clan top
+```
+
+**Ne yapar:** KDR'ye göre en iyi 10 klanı gösterir.
+
+**Sıralama:**
+
+1. 🥇 1. sıra (altın)
+2. 🥈 2. sıra (gümüş)
+3. 🥉 3. sıra (bronz) 4-10. Diğer sıralar
+
+---
+
+### 👥 Üye Listesi
+
+```text
+/clan members
+```
+
+**Ne yapar:** Klanındaki tüm üyeleri ve rütbelerini gösterir.
+
+**Rütbe Simgeleri:**
+
+- 👑 Lider
+- 🛡️ Yardımcı Lider
+- ⚔️ Moderatör
+- 🎖️ Üye
+
+---
+
+### 📊 İstatistikler
+
+```text
+/clan stats
+```
+
+**Ne yapar:** Kendi savaş istatistiklerini gösterir.
+
+Başka oyuncunun istatistikleri için:
+
+```text
+/clan stats <oyuncu>
+```
+
+**Gösterilen Bilgiler:**
+
+- Öldürme sayısı
+- Ölüm sayısı
+- KDR (Kill/Death Ratio)
+- Assist sayısı
+- En yüksek seri
+- Toplam puan
+
+---
+
+### 🏅 Sıralama Tablosu
+
+```text
+/clan leaderboard
+```
+
+**Ne yapar:** Detaylı sıralama menüsünü açar.
+
+**Kategoriler:**
+
+- **Klan Sıralaması:** KDR, Öldürme, Puan
+- **Oyuncu Sıralaması:** Bireysel istatistikler
+- **Klan Üye Sıralaması:** Klan içi sıralama
+
+---
+
+## 🔼 Yönetim Komutları
+
+### ⬆️ Terfi Ettirme
+
+```text
+/clan promote <oyuncu>
+```
+
+**Ne yapar:** Bir üyeyi bir rütbe yükseltir.
+
+**Kim kullanabilir:** Lider, Yardımcı Lider
+
+**Rütbe Sırası:**
+
+```text
+Üye → Moderatör → Yardımcı Lider
+```
+
+**Örnek:**
+
+```text
+/clan promote AktifUye
+```
+
+**Kurallar:**
+
+- Sadece kendinden düşük rütbeli birini terfi ettirebilirsin
+- Lider rütbesine terfi ettirilemez (transfer gerekir)
+
+---
+
+### ⬇️ Rütbe Düşürme
+
+```text
+/clan demote <oyuncu>
+```
+
+**Ne yapar:** Bir üyenin rütbesini bir seviye düşürür.
+
+**Kim kullanabilir:** Lider, Yardımcı Lider
+
+**Rütbe Sırası:**
+
+```text
+Yardımcı Lider → Moderatör → Üye
+```
+
+**Örnek:**
+
+```text
+/clan demote ProblematikModerator
+```
+
+---
+
+### 👑 Liderlik Devri
+
+```text
+/clan transfer <oyuncu>
+```
+
+**Ne yapar:** Klan liderliğini başka bir üyeye devr eder.
+
+**Kim kullanabilir:** Sadece lider
+
+**Örnek:**
+
+```text
+/clan transfer GuvenilirYardimci
+```
+
+⚠️ **Dikkat:** Bu işlem geri alınamaz! Liderlik hakkını kaybedersin.
+
+---
+
+## 🏠 Klan Evi Komutları
+
+### 🏠 Klan Evine Işınlanma
+
+```text
+/clan home
+```
+
+**Ne yapar:** Klan evine ışınlanır.
+
+**Gereksinimler:**
+
+- Klan evi ayarlanmış olmalı
+- Klan üyesi olmalısın
+
+---
+
+### 📍 Klan Evi Ayarlama
+
+```text
+/clan sethome
+```
+
+**Ne yapar:** Bulunduğun konumu klan evi olarak ayarlar.
+
+**Kim kullanabilir:** Lider, Yardımcı Lider
+
+**Örnek:** Klan üssünde dur ve komutu yaz:
+
+```text
+/clan sethome
+```
+
+---
+
+### 🗑️ Klan Evi Silme
+
+```text
+/clan delhome
+```
+
+**Ne yapar:** Klan evini siler.
+
+**Kim kullanabilir:** Lider, Yardımcı Lider
+
+---
+
+## 🎒 Özel Özellik Komutları
+
+### 🎒 Sanal Sırt Çantası
+
+```text
+/clan backpack
+```
+
+**Ne yapar:** Ölüme dayanıklı kişisel deponu açar.
+
+**Gereksinimler:**
+
+- Klanın "Sanal Sırt Çantası" yükseltmesi açık olmalı
+
+**Özellikler:**
+
+- Ölünce eşyalar kaybolmaz
+- Sadece sen erişebilirsin
+- 2 slot kullanılabilir
+
+---
+
+### 🔼 Yükseltmeler
+
+```text
+/clan upgrades
+```
+
+**Ne yapar:** Klan yükseltmeleri menüsünü açar.
+
+**Yükseltmeler:**
+
+- 👥 Klan Kapasitesi
+- 🎒 Sanal Sırt Çantası
+- 🧭 Ölüm Pusulası
+- ⚠️ Dayanıklılık Uyarısı
+
+---
+
+### ⚡ Yetenekler
+
+```text
+/clan abilities
+```
+
+**Ne yapar:** Klan yetenekleri menüsünü açar.
+
+**Kategoriler:**
+
+- 🪓 Odunculuk
+- ⛏️ Madencilik
+- ⚔️ Savaş
+- 🌾 Çiftçilik
+
+Belirli bir yeteneği açmak/yükseltmek için:
+
+```text
+/clan ability <yetenek_id>
+```
+
+---
+
+### 📋 Görevler
+
+```text
+/clan quests
+```
+
+**Ne yapar:** Klan görevleri menüsünü açar.
+
+**Görev Türleri:**
+
+- 📅 Günlük (24 saat)
+- 📆 Haftalık (7 gün)
+- 📊 Aylık (30 gün)
+
+---
+
+## 💬 İletişim Komutları
+
+### 💬 Klan Sohbeti
+
+```text
+/clanchat <mesaj>
+```
+
+**Ne yapar:** Sadece klan üyelerinin görebileceği mesaj gönderir.
+
+**Kısa hali:**
+
+```text
+/cc <mesaj>
+```
+
+**Örnek:**
+
+```text
+/cc Herkese selam! Boss'a gidelim mi?
+```
+
+---
+
+## 🔍 Arama ve Başvuru Komutları
+
+### 🔍 Klan Arama
+
+```text
+/clan search
+```
+
+**Ne yapar:** Açık klanları gösterir ve başvuru yapmanı sağlar.
+
+**Özellikler:**
+
+- Klan seviyesi
+- Üye sayısı
+- Açıklama
+- Başvuru butonu
+
+---
+
+### 📝 Klana Başvuru
+
+```text
+/clan apply <klan_adı>
+```
+
+**Ne yapar:** Belirtilen klana katılma isteği gönderir.
+
+**Örnek:**
+
+```text
+/clan apply FuryWarriors
+```
+
+---
+
+### 🚫 Başvuruyu Geri Çekme
+
+```text
+/clan withdraw
+```
+
+**Ne yapar:** Gönderdiğin katılma isteğini iptal eder.
+
+---
+
+### 📬 Katılma İstekleri
+
+```text
+/clan requests
+```
+
+**Ne yapar:** Klana gelen katılma isteklerini gösterir.
+
+**Kim kullanabilir:** Lider, Yardımcı Lider, Moderatör
+
+**İşlemler:**
+
+- ✅ Kabul et
+- ❌ Reddet
+
+---
+
+## ⚙️ Ayar Komutları
+
+### 🔥 Dost Ateşi
+
+```text
+/clan friendlyfire
+```
+
+**Ne yapar:** Klan üyelerinin birbirine hasar vermesini açar/kapatır.
+
+**Kim kullanabilir:** Lider, Moderatör
+
+**Durumlar:**
+
+- 🟢 **Açık:** Üyeler birbirine hasar verebilir
+- 🔴 **Kapalı:** Üyeler birbirine hasar veremez (varsayılan)
+
+---
+
+### 🔔 Bildirimler
+
+```text
+/clan notify
+```
+
+**Ne yapar:** Yetenek bildirimlerini yönetir.
+
+**Alt Komutlar:**
+
+```text
+/clan notify toggle        # Tümünü aç/kapat
+/clan notify on           # Tümünü aç
+/clan notify off          # Tümünü kapat
+/clan notify list         # Ayarları göster
+/clan notify reset        # Varsayılana dön
+```
+
+**Kategori Bazlı:**
+
+```text
+/clan notify category <kategori>
+```
+
+**Kategoriler:**
+
+- combat (savaş)
+- mining (madencilik)
+- woodcutting (odunculuk)
+- farming (çiftçilik)
+
+**Yetenek Bazlı:**
+
+```text
+/clan notify <yetenek_id>
+```
+
+---
+
+## 🎯 Yardım Komutu
+
+### ❓ Yardım
+
+```text
+/clan help
+```
+
+**Ne yapar:** Tüm klan komutlarını listeler.
+
+**Türkçe komutlar için:**
+
+```text
+/klan yardim
+```
+
+---
+
+## 💡 Komut İpuçları
+
+### 🎯 Hızlı Erişim
+
+**Sık kullanılan komutlar için kısa yollar:**
+
+```text
+/clan info          → /clan i
+/clan list          → /clan ls
+/clan top           → /clan top
+/clan backpack      → /clan bp
+/clanchat <mesaj>   → /cc <mesaj>
+```
+
+### 📝 Tab Tamamlama
+
+Komutları yazarken **TAB tuşuna** bas:
+
+- Komut önerileri gelir
+- Oyuncu isimleri otomatik tamamlanır
+- Klan isimleri önerilir
+
+**Örnek:**
+
+```text
+/clan invite O[TAB]  →  /clan invite Oryxel
+```
+
+### 🔄 Komut Geçmişi
+
+Önceki komutları tekrar kullanmak için:
+
+- **Yukarı ok (↑):** Önceki komut
+- **Aşağı ok (↓):** Sonraki komut
+
+### 🌐 Çoklu Dil Desteği
+
+Komutlar **hem İngilizce hem Türkçe** çalışır:
+
+| İngilizce | Türkçe |
+| --- | --- |
+| /clan create | /klan olustur |
+| /clan invite | /klan davet |
+| /clan accept | /klan kabul |
+| /clan leave | /klan ayril |
+| /clan info | /klan bilgi |
+| /clan help | /klan yardim |
+
+---
+
+## ❓ Sık Sorulan Sorular
+
+### Komut çalışmıyor, ne yapmalıyım?
+
+**Kontrol et:**
+
+1. ✅ Komutu doğru yazdın mı?
+2. ✅ Gerekli yetkiye sahip misin?
+3. ✅ Bir klana üye misin? (gerekiyorsa)
+4. ✅ Cooldown süresinde misin?
+
+### Hangi komutları kullanabilirim?
+
+**Rütbene göre değişir:**
+
+- 👑 **Lider:** Tüm komutlar
+- 🛡️ **Yardımcı Lider:** Çoğu komut (disband hariç)
+- ⚔️ **Moderatör:** Üye yönetimi komutları
+- 🎖️ **Üye:** Temel komutlar
+
+### Komut cooldown'ı nedir?
+
+Bazı komutlar **spam'i önlemek** için cooldown'a sahiptir:
+
+- Davet: 1.5 saniye
+- Sohbet: Yok
+- Bilgi: Yok
+
+### Komut hatası alıyorum?
+
+**Yaygın hatalar:**
+
+- `Yetkiniz yok` → Rütben yeterli değil
+- `Klan bulunamadı` → Klan adını yanlış yazdın
+- `Oyuncu bulunamadı` → Oyuncu çevrimiçi değil
+- `Klan dolu` → Kapasite yükseltmesi gerekli
+
+---
+
+**📜 Artık tüm komutları biliyorsun!** Klanını yönetmeye başla! 🏰✨
