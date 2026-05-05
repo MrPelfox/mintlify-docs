@@ -1,0 +1,482 @@
+---
+title: "Esnaf ve Satış"
+---
+
+# Esnaf ve Satış Sistemi
+
+Yakaladığınız balıkları **4 farklı esnafa** satabilirsiniz. Her esnaf farklı **fiyat oranı** ve **depo kapasitesi**ne sahiptir. Esnaflar arası rekabet sistemi sayesinde en iyi fiyatı bulmak sizin elinizde!
+
+## 🏪 Esnaf Sistemi Nasıl Çalışır?
+
+### Temel Mekanik
+
+1. **4 Esnaf** vardır: Altın, Gümüş, Bakır, Demir
+2. Her esnaf **farklı fiyat çarpanı** sunar
+3. Her esnafın **depo kapasitesi** vardır (512 balık)
+4. Depo dolunca esnaf **alışı kapatır**
+5. **Tüm esnaflar** dolunca depolar **sıfırlanır**
+
+### Dinamik Fiyatlandırma
+
+Esnaflar **rekabet halindedir**:
+
+- **Altın Esnaf**: En düşük fiyat (%5 fazla)
+- **Gümüş Esnaf**: Orta fiyat (%10 fazla)
+- **Bakır Esnaf**: İyi fiyat (%15 fazla)
+- **Demir Esnaf**: En yüksek fiyat (%20 fazla)
+
+**💡 Strateji:** Demir Esnaf'a satmak en karlı, ama deposu hızlı dolar!
+
+---
+
+## 👨‍💼 Esnaflar
+
+### 1️⃣ Altın Esnaf
+
+```text
+Komut: /esnaf1
+Fiyat Çarpanı: 1.05x (+%5)
+Depo Kapasitesi: 512 balık
+Bonus Depo: 128 balık
+Maksimum Depo: 512 balık
+```
+
+**Özellikler:**
+
+- En düşük fiyat sunar
+- Deposu en yavaş dolar
+- Güvenli seçenek
+
+**Ne zaman kullanılır:**
+
+- Diğer esnaflar doluyken
+- Hızlı satış yapmak istediğinizde
+- Sıradan balık satarken
+
+**Örnek Fiyatlar:**
+
+- Sıradan balık (10 ⛃): 10 × 1.05 = **10.5 ⛃**
+- Nadir balık (40 ⛃): 40 × 1.05 = **42 ⛃**
+- Epik balık (150 ⛃): 150 × 1.05 = **157.5 ⛃**
+
+---
+
+### 2️⃣ Gümüş Esnaf
+
+```text
+Komut: /esnaf2
+Fiyat Çarpanı: 1.10x (+%10)
+Depo Kapasitesi: 512 balık
+Bonus Depo: 128 balık
+Maksimum Depo: 512 balık
+```
+
+**Özellikler:**
+
+- Orta seviye fiyat
+- Dengeli seçenek
+- Popüler esnaf
+
+**Ne zaman kullanılır:**
+
+- Dengeli fiyat istediğinizde
+- Orta seviye balık satarken
+- Altın Esnaf doluyken
+
+**Örnek Fiyatlar:**
+
+- Sıradan balık (10 ⛃): 10 × 1.10 = **11 ⛃**
+- Nadir balık (40 ⛃): 40 × 1.10 = **44 ⛃**
+- Epik balık (150 ⛃): 150 × 1.10 = **165 ⛃**
+
+---
+
+### 3️⃣ Bakır Esnaf
+
+```text
+Komut: /esnaf3
+Fiyat Çarpanı: 1.15x (+%15)
+Depo Kapasitesi: 512 balık
+Bonus Depo: 128 balık
+Maksimum Depo: 512 balık
+```
+
+**Özellikler:**
+
+- İyi fiyat sunar
+- Deposu orta hızda dolar
+- Karlı seçenek
+
+**Ne zaman kullanılır:**
+
+- Nadir balık satarken
+- İyi fiyat istediğinizde
+- Gümüş Esnaf doluyken
+
+**Örnek Fiyatlar:**
+
+- Sıradan balık (10 ⛃): 10 × 1.15 = **11.5 ⛃**
+- Nadir balık (40 ⛃): 40 × 1.15 = **46 ⛃**
+- Epik balık (150 ⛃): 150 × 1.15 = **172.5 ⛃**
+
+---
+
+### 4️⃣ Demir Esnaf
+
+```text
+Komut: /esnaf4
+Fiyat Çarpanı: 1.20x (+%20)
+Depo Kapasitesi: 512 balık
+Bonus Depo: 128 balık
+Maksimum Depo: 512 balık
+```
+
+**Özellikler:**
+
+- **En yüksek fiyat** sunar
+- Deposu **en hızlı** dolar
+- **En karlı** seçenek
+
+**Ne zaman kullanılır:**
+
+- **Epik/Efsanevi/Mitik** balık satarken
+- Maksimum kar istediğinizde
+- Depo boşken hemen satın
+
+**Örnek Fiyatlar:**
+
+- Sıradan balık (10 ⛃): 10 × 1.20 = **12 ⛃**
+- Nadir balık (40 ⛃): 40 × 1.20 = **48 ⛃**
+- Epik balık (150 ⛃): 150 × 1.20 = **180 ⛃**
+- Efsanevi balık (400 ⛃): 400 × 1.20 = **480 ⛃**
+- Mitik balık (1000 ⛃): 1000 × 1.20 = **1200 ⛃**
+
+**💡 İpucu:** Mitik balık için **200 ⛃ fark** var! Mutlaka Demir Esnaf'a satın!
+
+---
+
+## 📊 Esnaf Karşılaştırması
+
+### Fiyat Karşılaştırma Tablosu
+
+| Balık Değeri | Altın (1.05x) | Gümüş (1.10x) | Bakır (1.15x) | Demir (1.20x) | Fark |
+| --- | --- | --- | --- | --- | --- |
+| 10 ⛃ | 10.5 ⛃ | 11 ⛃ | 11.5 ⛃ | 12 ⛃ | \+1.5 ⛃ |
+| 50 ⛃ | 52.5 ⛃ | 55 ⛃ | 57.5 ⛃ | 60 ⛃ | \+7.5 ⛃ |
+| 100 ⛃ | 105 ⛃ | 110 ⛃ | 115 ⛃ | 120 ⛃ | \+15 ⛃ |
+| 200 ⛃ | 210 ⛃ | 220 ⛃ | 230 ⛃ | 240 ⛃ | \+30 ⛃ |
+| 500 ⛃ | 525 ⛃ | 550 ⛃ | 575 ⛃ | 600 ⛃ | \+75 ⛃ |
+| 1000 ⛃ | 1050 ⛃ | 1100 ⛃ | 1150 ⛃ | 1200 ⛃ | \+150 ⛃ |
+| 5000 ⛃ | 5250 ⛃ | 5500 ⛃ | 5750 ⛃ | 6000 ⛃ | \+750 ⛃ |
+
+**💡 Sonuç:** Değerli balıklar için esnaf seçimi **çok önemli**!
+
+---
+
+## 🔄 Depo Sistemi
+
+### Depo Kapasitesi
+
+Her esnafın **512 balık** depo kapasitesi vardır:
+
+- **Bonus Depo**: 128 balık (başlangıç bonusu)
+- **Maksimum Depo**: 512 balık
+
+### Depo Dolma Mekanizması
+
+1. Oyuncular balık sattıkça depo **dolar**
+2. Depo **512 balığa** ulaşınca esnaf **alışı kapatır**
+3. **Tüm 4 esnaf** dolunca **tüm depolar sıfırlanır**
+4. Sistem **yeniden başlar**
+
+**💡 Strateji:** Demir Esnaf'ın deposu hızlı dolar. Boşken hemen satın!
+
+---
+
+## 💰 Satış Stratejileri
+
+### 1️⃣ Hızlı Satış Stratejisi
+
+**Hedef:** Hızlıca para kazanmak
+
+```text
+Sıradan balıklar → Altın Esnaf (1.05x)
+Nadir balıklar → Gümüş Esnaf (1.10x)
+Epik+ balıklar → Demir Esnaf (1.20x)
+```
+
+**Avantajlar:**
+
+- Hızlı satış
+- Depo dolma riski düşük
+- Sürekli gelir
+
+**Dezavantajlar:**
+
+- Sıradan balıklarda düşük kar
+
+---
+
+### 2️⃣ Maksimum Kar Stratejisi
+
+**Hedef:** En yüksek fiyatı almak
+
+```text
+TÜM balıklar → Demir Esnaf (1.20x)
+Depo doluysa → Bakır Esnaf (1.15x)
+Bakır da doluysa → Gümüş Esnaf (1.10x)
+```
+
+**Avantajlar:**
+
+- Maksimum kar
+- Değerli balıklarda büyük fark
+
+**Dezavantajlar:**
+
+- Depo dolma riski yüksek
+- Bazen beklemek gerekir
+
+---
+
+### 3️⃣ Dengeli Strateji
+
+**Hedef:** Kar ve hız dengesi
+
+```text
+Sıradan/Nadir → Gümüş Esnaf (1.10x)
+Epik → Bakır Esnaf (1.15x)
+Efsanevi/Mitik → Demir Esnaf (1.20x)
+```
+
+**Avantajlar:**
+
+- Dengeli kar
+- Orta risk
+- Esnek sistem
+
+**Dezavantajlar:**
+
+- Maksimum kar değil
+
+---
+
+## 📈 Gelir Optimizasyonu
+
+### Örnek Senaryo: 100 Balık Satışı
+
+**Balık Dağılımı:**
+
+- 60 Sıradan (ortalama 12 ⛃)
+- 25 Nadir (ortalama 45 ⛃)
+- 10 Epik (ortalama 180 ⛃)
+- 4 Efsanevi (ortalama 500 ⛃)
+- 1 Mitik (ortalama 1500 ⛃)
+
+**Toplam Temel Değer:**
+
+- Sıradan: 60 × 12 = 720 ⛃
+- Nadir: 25 × 45 = 1125 ⛃
+- Epik: 10 × 180 = 1800 ⛃
+- Efsanevi: 4 × 500 = 2000 ⛃
+- Mitik: 1 × 1500 = 1500 ⛃
+- **Toplam: 7145 ⛃**
+
+### Strateji 1: Hep Altın Esnaf (1.05x)
+
+```text
+7145 × 1.05 = 7502 ⛃
+Kar: +357 ⛃
+```
+
+### Strateji 2: Hep Demir Esnaf (1.20x)
+
+```text
+7145 × 1.20 = 8574 ⛃
+Kar: +1429 ⛃
+```
+
+### Strateji 3: Dengeli (Önerilen)
+
+```text
+Sıradan (720) → Gümüş (1.10x) = 792 ⛃
+Nadir (1125) → Gümüş (1.10x) = 1237 ⛃
+Epik (1800) → Bakır (1.15x) = 2070 ⛃
+Efsanevi (2000) → Demir (1.20x) = 2400 ⛃
+Mitik (1500) → Demir (1.20x) = 1800 ⛃
+Toplam: 8299 ⛃
+Kar: +1154 ⛃
+```
+
+**💡 Sonuç:** Dengeli strateji ile **1154 ⛃** ekstra kazanç! (%16 artış)
+
+---
+
+## 🎯 İleri Seviye İpuçları
+
+### 1. Depo Takibi
+
+- Esnaf GUI'sinde **depo durumu** gösterilir
+- Depo dolmadan **değerli balıkları** satın
+- Depo doluysa **başka esnafa** geçin
+
+### 2. Zaman Yönetimi
+
+- **Sunucu yeni açıldığında** Demir Esnaf boştur
+- **Prime time'da** (akşam) depolar hızlı dolar
+- **Gece/sabah** depolar daha boş olur
+
+### 3. Toplu Satış
+
+- Balıkları **biriktirin**
+- Demir Esnaf **boşken** toplu satın
+- Maksimum kar için **zamanlama** önemli
+
+### 4. Mitik Balık Stratejisi
+
+```text
+Mitik balık yakaladınız!
+1. Hemen /esnaf4 kontrol edin
+2. Depo boşsa → Hemen satın (1.20x)
+3. Depo doluysa → /esnaf3 deneyin (1.15x)
+4. O da doluysa → Bekleyin veya /esnaf2 (1.10x)
+```
+
+**💡 İpucu:** 5000 ⛃ değerinde Mitik balık için:
+
+- Demir Esnaf: **6000 ⛃** (\+1000 ⛃)
+- Altın Esnaf: **5250 ⛃** (\+250 ⛃)
+- **Fark: 750 ⛃!** Beklemek değer!
+
+---
+
+## 🛒 Satış GUI Kullanımı
+
+### Esnaf Komutları
+
+```text
+/esnaf1 - Altın Esnaf
+/esnaf2 - Gümüş Esnaf
+/esnaf3 - Bakır Esnaf
+/esnaf4 - Demir Esnaf
+```
+
+### GUI Özellikleri
+
+1. **Balık Slotları**
+   - Envanterinizdeki balıkları GUI'ye yerleştirin
+   - Fiyatlar **otomatik hesaplanır**
+   - Toplam fiyat **gösterilir**
+2. **Fiyat Önizleme**
+   - Her balığın **esnaf fiyatı** gösterilir
+   - Toplam kazanç **hesaplanır**
+   - Onaylamadan önce **kontrol edin**
+3. **Onaylama**
+   - Fiyatları kontrol edin
+   - **Onayla** butonuna tıklayın
+   - Para **otomatik** hesabınıza gelir
+
+**⚠️ Dikkat:** Satış **geri alınamaz**! Fiyatları kontrol edin!
+
+---
+
+## 📊 Depo Sıfırlama Sistemi
+
+### Nasıl Çalışır?
+
+1. **4 esnafın hepsi** 512 balığa ulaşır
+2. Sistem **otomatik** tüm depoları sıfırlar
+3. **Tüm esnaflar** tekrar alışa açılır
+4. Döngü **yeniden başlar**
+
+### Sıfırlama Zamanlaması
+
+**Ortalama sıfırlama süresi:**
+
+- **Yoğun saatlerde**: 2-4 saat
+- **Normal saatlerde**: 6-8 saat
+- **Gece saatlerde**: 12\+ saat
+
+**💡 İpucu:** Sıfırlama sonrası **ilk satanlar** en yüksek fiyatı alır!
+
+---
+
+## 💎 Özel Durumlar
+
+### Mitik Balık Satışı
+
+**Senaryo:** 10.000 ⛃ değerinde Mitik balık yakaladınız!
+
+| Esnaf | Çarpan | Fiyat | Kar |
+| --- | --- | --- | --- |
+| Altın | 1.05x | 10.500 ⛃ | \+500 ⛃ |
+| Gümüş | 1.10x | 11.000 ⛃ | \+1000 ⛃ |
+| Bakır | 1.15x | 11.500 ⛃ | \+1500 ⛃ |
+| Demir | 1.20x | 12.000 ⛃ | \+2000 ⛃ |
+
+**Fark: 1500 ⛃!** Demir Esnaf'ı beklemek **kesinlikle** değer!
+
+---
+
+### Toplu Satış Optimizasyonu
+
+**Senaryo:** 50 Epik balık biriktirdiniz (ortalama 200 ⛃)
+
+**Temel değer:** 50 × 200 = 10.000 ⛃
+
+| Esnaf | Çarpan | Toplam | Kar |
+| --- | --- | --- | --- |
+| Altın | 1.05x | 10.500 ⛃ | \+500 ⛃ |
+| Gümüş | 1.10x | 11.000 ⛃ | \+1000 ⛃ |
+| Bakır | 1.15x | 11.500 ⛃ | \+1500 ⛃ |
+| Demir | 1.20x | 12.000 ⛃ | \+2000 ⛃ |
+
+**Strateji:**
+
+1. Demir Esnaf boşsa → Hepsini sat (12.000 ⛃)
+2. Demir dolu, Bakır boşsa → Hepsini sat (11.500 ⛃)
+3. İkisi de doluysa → Yarısını Gümüş, yarısını bekle
+
+---
+
+## 📚 Özet ve Öneriler
+
+### Yeni Başlayanlar İçin
+
+```text
+✅ Altın ve Gümüş Esnaf kullanın
+✅ Hızlı satış yapın
+✅ Depo takibi yapmayın (henüz)
+✅ Deneyim kazanın
+```
+
+### Orta Seviye İçin
+
+```text
+✅ Gümüş ve Bakır Esnaf kullanın
+✅ Değerli balıkları Demir'e satın
+✅ Depo durumunu kontrol edin
+✅ Zamanlama öğrenin
+```
+
+### İleri Seviye İçin
+
+```text
+✅ Öncelik: Demir Esnaf
+✅ Depo takibi yapın
+✅ Toplu satış stratejisi
+✅ Sıfırlama zamanlaması öğrenin
+✅ Maksimum kar için bekleyin
+```
+
+---
+
+## 📚 Diğer Sayfalar
+
+- [**Balıkçılık Sistemi Nedir?**](./01-balikcilik-sistemi-nedir.mdx) - Temel mekanikler
+- [**Balık Türleri ve Nadirlik**](./02-balik-turleri-ve-nadirlik.mdx) - 100\+ balık türü
+- [**Yem ve Ekipman**](./03-yem-ve-ekipman.mdx) - Şansınızı artırın
+
+---
+
+**💰 Akıllı sat, zengin ol!**

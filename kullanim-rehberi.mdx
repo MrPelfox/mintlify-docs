@@ -1,0 +1,578 @@
+---
+title: "Kullanım Rehberi"
+---
+
+# 📖 FuryForge Kullanım Rehberi
+
+FuryForge'u **adım adım** nasıl kullanacağını öğren! Bu rehber, makine yerleştirmeden ileri seviye özelliklere kadar her şeyi kapsar.
+
+## 🎮 Temel Kullanım
+
+### 1️⃣ Makine Edinme
+
+**Coin Market'ten satın al:**
+
+```text
+1. /coinmarket yaz
+2. FuryForge kategorisine tıkla
+3. "FuryForge Fırın" seç
+4. Satın al (256 Gold Coin / 100 Plat / 75 Diamond)
+```
+
+**Özellikler:**
+
+- 📦 Blast Furnace görünümü
+- 🎨 Özel isim ve lore
+- 🔒 Benzersiz ID (dupe önleme)
+- ⭐ Seviye 1 olarak gelir
+
+---
+
+### 2️⃣ Makine Yerleştirme
+
+**Adımlar:**
+
+```text
+1. FuryForge Fırın'ı envanterinden al
+2. Yerleştirmek istediğin yere git
+3. Sağ tıkla (blok yerleştirme)
+4. Makine otomatik olarak aktif olur
+```
+
+**Yerleştirme kuralları:**
+
+- ✅ Survival/Adventure modda yerleştirilebilir
+- ❌ Creative/Spectator modda yerleştirilemez
+- ✅ Herhangi bir yere yerleştirilebilir
+- ⚠️ Maksimum 2 makine/oyuncu
+
+**Hologram:** Makine yerleştirildiğinde üstünde **4 satırlık hologram** belirir:
+
+```text
+§c§lFuryForge §eLv 1
+Bekleniyor
+──────────
+Boost: Pasif
+```
+
+---
+
+### 3️⃣ GUI Açma
+
+**Makineye sağ tıkla!**
+
+**GUI yapısı (5 satır, 45 slot):**
+
+```text
+Row 0: [fill] [fill] [fill] [fill] [INFO]  [fill] [fill] [fill] [fill]
+Row 1: [fill] [IN]   [IN]   [IN]   [CONV]  [fill] [fill] [COLL] [fill]
+Row 2: [fill] [IN]   [IN]   [IN]   [fill]  [fill] [fill] [fill] [fill]
+Row 3: [fill] [fill] [fill] [fill] [BOOST] [fill] [fill] [fill] [fill]
+Row 4: [fill] [fill] [fill] [fill] [UPGRD] [fill] [fill] [fill] [fill]
+```
+
+**Slot açıklamaları:**
+
+- **Slot 4:** Makine Bilgi Paneli
+- **Slot 10,11,12,19,20,21:** INPUT (6 slot, 2×3 grid)
+- **Slot 13:** DÖNÜŞTÜR butonu
+- **Slot 16:** TOPLA butonu
+- **Slot 31:** BOOST SLOT
+- **Slot 40:** UPGRADE butonu
+- **Diğer:** Siyah cam dolgu (dekoratif)
+
+---
+
+### 4️⃣ Ekipman Dönüştürme
+
+**Adım adım:**
+
+```text
+1. Makineye sağ tıkla (GUI aç)
+2. Input slotlarına ekipman koy (6 slot)
+3. Dönüştür butonuna tıkla (yeşil cam)
+4. İşlem başlar (hologram güncellenir)
+5. İşlem bitince Topla butonuna tıkla
+6. Malzemeler envanterine eklenir
+```
+
+**Örnek:**
+
+```text
+Input: 3x Elmas Kazma (%100 dayanıklılık)
+İşlem: 5 saniye (Lv1)
+Output: 6-9 Elmas
+```
+
+---
+
+### 5️⃣ Output Toplama
+
+**Topla butonu (Slot 16):**
+
+- 📦 Tüm output'u toplar
+- ✅ Herkes kullanabilir (sahip olmana gerek yok!)
+- 🔒 Envanter doluysa işlem iptal
+- 📝 Her toplama loglanır
+
+**Toplama süreci:**
+
+```text
+1. Topla butonuna tıkla
+2. Envanter kontrolü yapılır
+3. Sığarsa → output temizlenir, envantere eklenir
+4. Sığmazsa → "Envanter dolu!" mesajı
+```
+
+**Önemli:**
+
+- Aynı anda iki oyuncu toplayamaz (mutex kilidi)
+- Shift-click, drag, double-click engellenir
+- Output asla yere düşmez
+
+---
+
+## ⚙️ İleri Seviye Özellikler
+
+### 🔧 Makine Yükseltme
+
+**Yöntem 1: GUI İçinden (Önerilen)**
+
+```text
+1. Makineye sağ tıkla
+2. Upgrade butonuna tıkla (Slot 40)
+3. Maliyet gösterilir
+4. Yeterli coin varsa → seviye artar
+5. Yetersizse → hata mesajı
+```
+
+**Yöntem 2: Komut**
+
+```text
+/ff upgrade
+(Makineye bakarken)
+```
+
+**Yükseltme maliyetleri:**
+
+```text
+Lv1 → Lv2: 5,000 Coin
+Lv2 → Lv3: 15,000 Coin
+Lv3 → Lv4: 35,000 Coin
+Lv4 → Lv5: 75,000 Coin
+Toplam: 130,000 Coin
+```
+
+**Yükseltme avantajları:**
+
+- ⚡ Daha hızlı işlem
+- 📈 Daha yüksek verim
+- 📦 Daha fazla item kapasitesi
+- 🗄️ Daha büyük output depo
+
+---
+
+### ⚡ Boost Sistemi
+
+**Boost Core nedir?** Makineye takılan **fiziksel bir item** (Nether Star) ile verim artışı sağlar!
+
+**Boost Core özellikleri:**
+
+- 🌟 **Malzeme:** Nether Star
+- ⚡ **Güç:** %1-%100 (varsayılan %20)
+- 🔋 **Şarj:** 1-1000 (varsayılan 50)
+- 🔒 **Benzersiz ID:** UUID ile korunur
+
+---
+
+**Boost Core Edinme:**
+
+**Coin Market'ten satın al:**
+
+```text
+/coinmarket
+→ FuryForge kategorisi
+→ Boost Core satın al
+```
+
+---
+
+**Boost Core Kullanma:**
+
+```text
+1. Boost Core'u envanterine al
+2. Makineye sağ tıkla
+3. Boost Slot'a (Slot 31) Boost Core'u koy
+4. Boost otomatik aktif olur
+5. Her item işleme 1 şarj tüketir
+```
+
+**Boost etkileri:**
+
+- ✅ Verim artışı (güç × seviye çarpanı)
+- ✅ Hologramda gösterilir
+- ❌ Jackpot şansını ETKİLEMEZ
+- ❌ Verim tavanını (%85) ARTIRMAZ
+
+---
+
+**Seviyeye göre boost azalması:**
+
+| Seviye | Boost Çarpanı | Örnek (%20 güç) |
+| --- | --- | --- |
+| Lv1 | %100 | \+%20 verim |
+| Lv2 | %85 | \+%17 verim |
+| Lv3 | %70 | \+%14 verim |
+| Lv4 | %55 | \+%11 verim |
+| Lv5 | %40 | \+%8 verim |
+
+**Neden azalır?** Yüksek seviye makineler zaten güçlü. Boost'un aşırı etkisi ekonomiyi bozar.
+
+---
+
+**Şarj tüketimi:**
+
+```text
+Başlangıç: 50 şarj
+İşlem 1: 5 item → 5 şarj tüketilir → 45 kaldı
+İşlem 2: 10 item → 10 şarj tüketilir → 35 kaldı
+İşlem 3: 35 item → 35 şarj tüketilir → 0 kaldı
+Boost tükendi!
+```
+
+**Tükenmiş boost:**
+
+- Item makinede kalır
+- Etki vermez
+- Çıkarıp yenisini koyabilirsin
+
+---
+
+### 👥 Trust (Güvenilir Oyuncu) Sistemi
+
+**Trust nedir?** Başka oyunculara makineyi kullanma yetkisi ver!
+
+**Trust komutları:**
+
+```text
+/ff trust <oyuncu>    → Güvenilir oyuncu ekle
+/ff untrust <oyuncu>  → Güvenilir oyuncu çıkar
+/ff info              → Makine bilgilerini gör
+```
+
+**Güvenilir oyuncu yetkileri:**
+
+- ✅ GUI açabilir
+- ✅ Input slotuna item koyabilir
+- ✅ Dönüştür butonuna basabilir
+- ✅ Output toplayabilir
+- ✅ Boost Core koyup çıkarabilir
+- ❌ Makineyi KIRAMAZ
+- ❌ Upgrade YAPAMAZ
+- ❌ Trust ekleyemez/çıkaramaz
+
+**Maksimum:** 2 güvenilir oyuncu
+
+**Örnek kullanım:**
+
+```text
+/ff trust Oryxel
+→ "Oryxel makineye erişim verildi."
+
+/ff untrust Oryxel
+→ "Oryxel makine erişimi kaldırıldı."
+```
+
+---
+
+### 🔨 Tamir Sistemi
+
+**Makine dayanıklılığı:** Her işlem makine dayanıklılığını azaltır!
+
+**Seviye bazlı max dayanıklılık:**
+
+```text
+Lv1: 50 dayanıklılık
+Lv2: 75 dayanıklılık
+Lv3: 100 dayanıklılık
+Lv4: 150 dayanıklılık
+Lv5: 200 dayanıklılık
+```
+
+**Dayanıklılık azalması:**
+
+- Her işlem: -1 dayanıklılık
+- Dayanıklılık 0 olursa: Makine YOK OLUR!
+
+---
+
+**Tamir Kiti:**
+
+**Nereden alınır:**
+
+```text
+/coinmarket
+→ FuryForge kategorisi
+→ Tamir Kiti (64 Gold Coin)
+```
+
+**Nasıl kullanılır:**
+
+```text
+1. Tamir Kiti'ni envanterine al
+2. Makineye Shift + Sağ Tık
+3. Dayanıklılık tam olur
+4. Tamir Kiti tüketilir
+```
+
+**Tamir maliyeti (Coin):**
+
+```text
+Lv1: 500 Coin
+Lv2: 1,000 Coin
+Lv3: 2,000 Coin
+Lv4: 4,000 Coin
+Lv5: 8,000 Coin
+```
+
+**Uyarı:** Dayanıklılık 0 olursa makine YOK OLUR ve geri gelmez!
+
+---
+
+## 🎯 Verim Optimizasyonu
+
+### 📊 Verim Hesaplama
+
+**Verim formülü:**
+
+```text
+baseYield = minYield + random() × (maxYield - minYield)
+durabilityFactor = (dayanıklılık / max) ^ 2.5
+boostFactor = 1 + (boostGüç × seviyeÇarpanı)
+finalYield = baseYield × durabilityFactor × boostFactor
+finalYield = min(finalYield, %85)  ← TAVAN
+```
+
+**Örnek hesaplama (Lv3, %100 dayanıklılık, %20 boost):**
+
+```text
+baseYield = %20 + random(0-30) = %35
+durabilityFactor = (100/100) ^ 2.5 = 1.0
+boostFactor = 1 + (0.20 × 0.70) = 1.14
+finalYield = %35 × 1.0 × 1.14 = %39.9
+```
+
+---
+
+### 💎 Maksimum Verim İçin İpuçları
+
+**1. Yüksek Dayanıklılık Kullan**
+
+```text
+✅ İyi: %100 dayanıklılık → Tam verim
+✅ Orta: %80 dayanıklılık → %57 verim
+❌ Kötü: %50 dayanıklılık → %18 verim
+❌ Çok Kötü: %10 dayanıklılık → %0.3 verim
+```
+
+**2. Makineyi Yükselt**
+
+```text
+Lv1: %10-40 verim
+Lv5: %30-60 verim
+Fark: +%20 min, +%20 max
+```
+
+**3. Boost Kullan**
+
+```text
+Boost yok: %35 verim
+%20 Boost (Lv3): %39.9 verim
+Fark: +%4.9 verim
+```
+
+**4. Jackpot Bekle**
+
+```text
+Normal: Maksimum %85
+Jackpot: %100 (çok nadir)
+Fark: +%15 verim
+```
+
+---
+
+### 📈 Verim Karşılaştırması
+
+**Senaryo 1: Yeni Ekipman (En İyi)**
+
+```text
+Ekipman: Elmas Kılıç (%100 dayanıklılık)
+Makine: Lv5
+Boost: %20
+Sonuç: %50-60 verim → 1-2 elmas
+```
+
+**Senaryo 2: Az Kullanılmış (İyi)**
+
+```text
+Ekipman: Elmas Kılıç (%80 dayanıklılık)
+Makine: Lv3
+Boost: Yok
+Sonuç: %11-28 verim → 0-1 elmas
+```
+
+**Senaryo 3: Çok Hasarlı (Kötü)**
+
+```text
+Ekipman: Elmas Kılıç (%30 dayanıklılık)
+Makine: Lv1
+Boost: Yok
+Sonuç: %0.5-2 verim → 0 elmas (çok nadir 1)
+```
+
+**Senaryo 4: Neredeyse Kırık (Çok Kötü)**
+
+```text
+Ekipman: Elmas Kılıç (%5 dayanıklılık)
+Makine: Lv5
+Boost: %20
+Sonuç: %0 verim → HİÇBİR ŞEY ÇIKMAZ!
+```
+
+---
+
+## 🛡️ Güvenlik ve Koruma
+
+### 🔒 Makine Koruması
+
+**Fiziksel koruma:**
+
+- ✅ Piston itme/çekme engeli
+- ✅ Hopper giriş/çıkış engeli
+- ✅ Patlama koruması
+- ✅ Chunk unload koruması
+
+**Kırma koruması:**
+
+- **Sahip:** Makine \+ output \+ boost itemi envanterine
+- **Güvenilir:** Kıramaz
+- **Diğer:** Makine yok olur, drop olmaz
+
+---
+
+### 🚫 Exploit Önleme
+
+**GUI korumaları:**
+
+- ✅ Shift-click engeli
+- ✅ Number-key hotbar swap engeli
+- ✅ Double-click engeli
+- ✅ Drag engeli
+- ✅ Creative middle-click engeli
+- ✅ Drop action engeli
+- ✅ Rapid-click cooldown (250ms)
+
+**Item korumaları:**
+
+- ✅ Benzersiz ID (dupe önleme)
+- ✅ Boost UUID doğrulama
+- ✅ Crafting engeli
+- ✅ Anvil rename engeli
+
+---
+
+### 💾 Restart Güvenliği
+
+**Sunucu kapanırsa:**
+
+```text
+1. Aktif işlemler iptal edilir
+2. İşlenmemiş itemler → pendingInput'a kaydedilir
+3. Makine verisi diske yazılır
+4. Sunucu açılınca → itemler iade edilir
+```
+
+**Chunk unload olursa:**
+
+```text
+1. İşlem iptal edilir
+2. İtemler pendingInput'a kaydedilir
+3. Hologram silinir
+4. Chunk load olunca → hologram yeniden oluşturulur
+```
+
+**Önemli:**
+
+- İtemler ASLA kaybolmaz
+- Output ASLA yere düşmez
+- Dupe ASLA oluşmaz
+
+---
+
+## 📋 Komut Listesi
+
+### Kullanabileceğin Komutlar
+
+```text
+/ff trust <oyuncu>     → Güvenilir oyuncu ekle
+/ff untrust <oyuncu>   → Güvenilir oyuncu çıkar
+/ff info               → Makine bilgilerini gör
+```
+
+**Komut örnekleri:**
+
+```text
+/ff trust FuryKing     → FuryKing'i güvenilir yap
+/ff untrust FuryKing   → FuryKing'i çıkar
+/ff info               → Güvenilir oyuncuları gör
+```
+
+**Not:** Yükseltme işlemi GUI içinden yapılır, komut gerekmez!
+
+---
+
+## ❓ Sık Sorulan Sorular
+
+### GUI nasıl açılır?
+
+**Makineye sağ tıkla!**
+
+### Kaç item aynı anda işlenebilir?
+
+**Seviyeye göre:** Lv1: 5, Lv2: 8, Lv3: 12, Lv4: 16, Lv5: 20
+
+### Output herkes alabilir mi?
+
+**Evet!** Herkes output toplayabilir. Bu takım çalışmasını teşvik eder.
+
+### Boost şarjı nasıl yenilenir?
+
+**Yenilemez!** Tükenince yeni Boost Core alman gerekir.
+
+### Makine kırılır mı?
+
+**Evet!** Dayanıklılık 0 olursa makine yok olur. Tamir Kiti kullan!
+
+### Restart sonrası itemler kaybolur mu?
+
+**Hayır!** Tüm itemler güvenli bir şekilde kaydedilir.
+
+### Çok hasarlı ekipman dönüştürülür mü?
+
+**Evet ama** çok az malzeme alırsın. %5'in altında HİÇBİR ŞEY çıkmaz!
+
+### Jackpot nasıl tetiklenir?
+
+**Rastgele!** %1 şans var, kontrol edemezsin.
+
+### Boost jackpot şansını artırır mı?
+
+**Hayır!** Boost sadece normal verim artışı sağlar.
+
+### Makine taşınabilir mi?
+
+**Evet!** Sahip kırıp başka yere yerleştirebilir.
+
+---
+
+**📖 Artık FuryForge'u kullanmayı biliyorsun!** Bir sonraki sayfada ileri seviye stratejileri öğren! 🔥✨

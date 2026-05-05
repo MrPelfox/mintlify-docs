@@ -58,6 +58,37 @@
                   "siralama-ve-istatistikler",
                   "ileri-seviye-rehber"
                 ]
+              },
+              {
+                "group": "FuryForge",
+                "pages": [
+                  "fury-forge-nedir",
+                  "kullanim-rehberi",
+                  "strateji-ve-ipuclari"
+                ]
+              },
+              {
+                "group": "Kayıp Günlük",
+                "pages": [
+                  "kayip-guenluek-nedir",
+                  "kesif-rehberi"
+                ]
+              },
+              {
+                "group": "Balıkçılık Sistemi",
+                "pages": [
+                  "balikcilik-sistemi-nedir",
+                  "balik-tuerleri-ve-nadirlikleri",
+                  "yem-ve-ekipman",
+                  "esnaf-ve-satis"
+                ]
+              },
+              {
+                "group": "FuryOils",
+                "pages": [
+                  "yag-sistemi-nedir",
+                  "yag-tuerleri-ve-kullanim"
+                ]
               }
             ]
           }
