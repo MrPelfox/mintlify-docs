@@ -20,74 +20,80 @@
   },
   "navigation": {
     "directory": "card",
-    "groups": [
+    "tabs": [
       {
-        "group": "FuryMine - SMP",
-        "pages": [
+        "tab": "a",
+        "groups": [
           {
-            "group": "Başlangıç",
-            "pages": []
-          },
-          {
-            "group": "Sistemler",
+            "group": "FuryMine - SMP",
+            "icon": "accessibility",
             "pages": [
               {
-                "group": "AutoMining",
-                "pages": [
-                  "auto-mining-nedir",
-                  "automining-nasil-kullanilir",
-                  "automining-coinler-ve-kullanim"
-                ]
+                "group": "Başlangıç",
+                "pages": []
               },
               {
-                "group": "CoinMarket",
+                "group": "Sistemler",
                 "pages": [
-                  "coin-market-nedir",
-                  "ueruenler-ve-fiyatlar",
-                  "sss-ve-ipuclari"
-                ]
-              },
-              {
-                "group": "Clan ve Perk",
-                "pages": [
-                  "clan-nedir",
-                  "clan-komutlari",
-                  "goerevler-ve-seviye",
-                  "yetenek-sistemi",
-                  "yuekseltmeler-ve-oezellikler",
-                  "siralama-ve-istatistikler",
-                  "ileri-seviye-rehber"
-                ]
-              },
-              {
-                "group": "FuryForge",
-                "pages": [
-                  "fury-forge-nedir",
-                  "kullanim-rehberi",
-                  "strateji-ve-ipuclari"
-                ]
-              },
-              {
-                "group": "Kayıp Günlük",
-                "pages": [
-                  "kayip-guenluek-nedir",
-                  "kesif-rehberi"
-                ]
-              },
-              {
-                "group": "Balıkçılık Sistemi",
-                "pages": [
-                  "balikcilik-sistemi-nedir",
-                  "balik-tuerleri-ve-nadirlikleri",
-                  "yem-ve-ekipman",
-                  "esnaf-ve-satis"
-                ]
-              },
-              {
-                "group": "FuryOils",
-                "pages": [
-                  "yag-sistemi-nedir",
-                  "yag-tuerleri-ve-kullanim"
+                  {
+                    "group": "AutoMining",
+                    "pages": [
+                      "auto-mining-nedir",
+                      "automining-nasil-kullanilir",
+                      "automining-coinler-ve-kullanim"
+                    ]
+                  },
+                  {
+                    "group": "CoinMarket",
+                    "pages": [
+                      "coin-market-nedir",
+                      "ueruenler-ve-fiyatlar",
+                      "sss-ve-ipuclari"
+                    ]
+                  },
+                  {
+                    "group": "Clan ve Perk",
+                    "pages": [
+                      "clan-nedir",
+                      "clan-komutlari",
+                      "goerevler-ve-seviye",
+                      "yetenek-sistemi",
+                      "yuekseltmeler-ve-oezellikler",
+                      "siralama-ve-istatistikler",
+                      "ileri-seviye-rehber"
+                    ]
+                  },
+                  {
+                    "group": "FuryForge",
+                    "pages": [
+                      "fury-forge-nedir",
+                      "kullanim-rehberi",
+                      "strateji-ve-ipuclari"
+                    ]
+                  },
+                  {
+                    "group": "Kayıp Günlük",
+                    "pages": [
+                      "kayip-guenluek-nedir",
+                      "kesif-rehberi"
+                    ]
+                  },
+                  {
+                    "group": "Balıkçılık Sistemi",
+                    "pages": [
+                      "balikcilik-sistemi-nedir",
+                      "balik-tuerleri-ve-nadirlikleri",
+                      "yem-ve-ekipman",
+                      "esnaf-ve-satis"
+                    ]
+                  },
+                  {
+                    "group": "FuryOils",
+                    "pages": [
+                      "yag-sistemi-nedir",
+                      "yag-tuerleri-ve-kullanim"
+                    ]
+                  }
                 ]
               }
             ]
