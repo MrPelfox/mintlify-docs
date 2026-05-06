@@ -114,5 +114,17 @@
   "fonts": {
     "family": "Plus Jakarta Sans",
     "weight": 500
+  },
+  "seo": {
+    "indexing": "all"
+  },
+  "interaction": {
+    "drilldown": true
+  },
+  "search": {
+    "prompt": "FuryMine Nasıl bir sunucudur?"
+  },
+  "thumbnails": {
+    "appearance": "dark"
   }
 }
