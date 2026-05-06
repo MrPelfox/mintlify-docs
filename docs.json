@@ -97,16 +97,11 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/FuryMineText.png",
+    "dark": "/images/FuryMineText.png"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Get support",
-        "href": "/support/contact-support"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Dashboard",
